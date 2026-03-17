@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import DynamicHeader from '@/components/common/DynamicHeader';
 import Breadcrumb from '@/components/common/Breadcrumb';
 import ProductCatalogInteractive from './components/ProductCatalogInteractive';
@@ -16,7 +17,9 @@ export default function ProductCatalogPage() {
         <div className="container mx-auto px-4 lg:px-8 pt-28">
           <Breadcrumb />
         </div>
-        <ProductCatalogInteractive />
+        <Suspense fallback={null}>
+          <ProductCatalogInteractive />
+        </Suspense>
       </main>
     </>
   );

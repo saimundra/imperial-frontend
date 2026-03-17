@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import DynamicHeader from '@/components/common/DynamicHeader';
 import Breadcrumb from '@/components/common/Breadcrumb';
 import OrderTrackingInteractive from './components/OrderTrackingInteractive';
@@ -19,7 +20,9 @@ export default function OrderTrackingPage() {
             { label: 'Track Order', path: '/order-tracking' },
           ]}
         />
-        <OrderTrackingInteractive />
+        <Suspense fallback={null}>
+          <OrderTrackingInteractive />
+        </Suspense>
       </main>
     </>
   );

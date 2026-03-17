@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import DynamicHeader from '@/components/common/DynamicHeader';
 import Breadcrumb from '@/components/common/Breadcrumb';
 import AuthenticationInteractive from './components/AuthenticationInteractive';
@@ -19,7 +20,9 @@ export default function UserAuthenticationPage() {
             { label: 'Account', path: '/user-authentication' },
           ]}
         />
-        <AuthenticationInteractive />
+        <Suspense fallback={null}>
+          <AuthenticationInteractive />
+        </Suspense>
       </main>
     </>
   );

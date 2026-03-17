@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import DynamicHeader from '@/components/common/DynamicHeader';
 import ProductDetailsPageContent from './components/ProductDetailsPageContent';
 
@@ -15,7 +16,9 @@ export default function ProductDetailsPage() {
 
       <main className="pt-28 pb-16">
         <div className="container mx-auto px-4 lg:px-8">
-          <ProductDetailsPageContent />
+          <Suspense fallback={null}>
+            <ProductDetailsPageContent />
+          </Suspense>
         </div>
       </main>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import Icon from '@/components/ui/AppIcon';
 import AuthenticationInteractive from '@/app/user-authentication/components/AuthenticationInteractive';
 
@@ -21,7 +22,9 @@ export default function SignupPage() {
         </Link>
       </div>
 
-      <AuthenticationInteractive initialMode="register" />
+      <Suspense fallback={null}>
+        <AuthenticationInteractive initialMode="register" />
+      </Suspense>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import Icon from '@/components/ui/AppIcon';
 import AuthenticationInteractive from '@/app/user-authentication/components/AuthenticationInteractive';
 
@@ -21,7 +22,9 @@ export default function LoginPage() {
         </Link>
       </div>
 
-      <AuthenticationInteractive initialMode="login" />
+      <Suspense fallback={null}>
+        <AuthenticationInteractive initialMode="login" />
+      </Suspense>
     </main>
   );
 }
