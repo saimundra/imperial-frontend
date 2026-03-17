@@ -8,13 +8,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Next.js with Tailwind CSS',
-  description: 'A boilerplate project with Next.js and Tailwind CSS',
-  icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
-    ],
-  },
+  title: 'Imperial Glow Nepal',
+  description: 'Premium beauty and skincare products in Nepal',
 };
 
 export default function RootLayout({
