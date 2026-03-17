@@ -10,6 +10,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Imperial Glow Nepal',
   description: 'Premium beauty and skincare products in Nepal',
+  icons: { icon: 'data:,' },
 };
 
 export default function RootLayout({
